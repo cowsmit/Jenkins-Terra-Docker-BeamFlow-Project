@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 # Specify your BigQuery project ID and dataset.table name
 table_spec = (
     'aerobic-rampart-437502-f0:'
-    'aekanun_workshop2.aekanun_dfsqltable_sales'
+    'cowsmit.aekanun_dfsqltable_sales'
 )
 
 # Define the schema for your BigQuery table
@@ -24,8 +24,8 @@ pipeline_args = [
     '--project=aerobic-rampart-437502-f0',  # Change to your GCP project ID
     '--runner=DataflowRunner',
     '--region=us-central1',  # Adjust as per your GCP region
-    '--staging_location=gs://aekanun_workshop2/temp/staging/',  # Change to your bucket path
-    '--temp_location=gs://aekanun_workshop2/temp',  # Change to your bucket path
+    '--staging_location=gs://cowsmit/temp/staging/',  # Change to your bucket path
+    '--temp_location=gs://cowsmit/temp',  # Change to your bucket path
     '--streaming',
     '--setup_file=./setup.py',  # Point to your setup file
 ]
